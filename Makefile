@@ -6,7 +6,7 @@ all:
 install:
 	mkdir -p ${DESTDIR}${BINDIR}
 	install -v src/azclient ${DESTDIR}${BINDIR}
-	ln -s ${DESTDIR}${BINDIR}/azclient ${DESTDIR}${BINDIR}/azirevpn 
+	ln -s azclient ${DESTDIR}${BINDIR}/azirevpn 
 	mkdir -p ${DESTDIR}/usr/share/applications
 	mkdir -p ${DESTDIR}/usr/share/pixmaps
 	cp -v src/dist/linux/azirevpn.desktop ${DESTDIR}/usr/share/applications/
