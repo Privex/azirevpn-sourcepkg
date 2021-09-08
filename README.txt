@@ -19,13 +19,11 @@ To build it:
     sudo apt install -y build-essential devscripts equivs dpkg-dev
     
     # Clone the repo
-    git clone --recurse-submodules https://github.com/Privex/azirevpn-sourcepkg.git azirevpn-0.5.0
+    git clone --recursive https://github.com/Privex/azirevpn-sourcepkg.git azirevpn-0.5.0
 
     # If you aren't already in the folder containing the AzireVPN source package files,
     # then enter it now.
     cd azirevpn-0.5.0
-    
-    git update --init --recursive .
     
     # View the help for the custom MAKE subcommands available for this source package
     make help
