@@ -23,7 +23,7 @@ clean-root:
 
 clean-src:
 	echo " >> Running 'make clean' in src/"
-	bash -c "cd src && make -f Makefile clean && cd .."
+	bash -c "[[ -f src/Makefile ]] && { cd src && make -f Makefile clean && cd ..; } || true"
 	echo " >> Removing 'azclient' in src/"
 	bash -c '[[ -f src/azclient ]] && rm src/azclient || true'
 
