@@ -1,0 +1,19 @@
+Source: azirevpn
+Section: unknown
+Standards-Version: 5.0.0
+Vcs-Git: https://github.com/azirevpn/azclient
+Priority: optional
+Build-Depends: debhelper, build-essential, libqt5charts5-dev, libqt5opengl5-dev, libqt5sensors5-dev, libqt5serialport5-dev, libqt5svg5-dev, libqt5texttospeech5-dev, libqt5waylandclient5-dev, libqt5waylandcompositor5-dev, libqt5webchannel5-dev, libqt5webkit5-dev, libqt5websockets5-dev, libqt5webview5-dev, libqt5x11extras5-dev, libqt5xmlpatterns5-dev, qt3d5-dev, qtbase5-dev, qtconnectivity5-dev, qtdeclarative5-dev, qtlocation5-dev, qtmultimedia5-dev, qtpositioning5-dev, qtquickcontrols2-5-dev, qtscript5-dev, qttools5-dev, qtwebengine5-dev, policykit-1, openvpn, qtchooser
+Maintainer: Privex Inc. <packaging@privex.io>
+
+
+
+Package: azirevpn
+Version: 0.5.0
+Essential: no
+Homepage: https://github.com/azirevpn/azclient
+XSBC-Original-Maintainer: Privex Inc. <packaging@privex.io>
+Architecture: any
+Depends: qttools5-dev-tools, libqt5core5a, libqt5gui5, policykit-1, openvpn, qtchooser
+Description: GUI Client for AzireVPN VPN service (https://azirevpn.com)
+

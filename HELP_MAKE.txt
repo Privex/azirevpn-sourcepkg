@@ -1,0 +1,41 @@
+
+===================================================== 
+
+Makefile for AzireVPN source package
+
+
+Sub-commands:
+
+	 debinstall      - Runs 'deb' followed by 'install-deb'
+
+	 install-deb     - Searches parent directory for azirevpn_0.5.0_ARCH.deb (where arch = amd64/armhf/arm64 etc.),
+	                   and installs it using 'dpkg -i' if found.
+
+         install-deps    - Generates a DEB containing the build dependencies in it's metadata, and then
+                           installs the DEB using 'dpkg -i' which installs the build deps - uses command 'mk-build-deps -i'
+         build-deb       - Builds the DEB file using 'dpkg-buildpackage -uc -us -b' - which will be outputted to the parent directory.
+
+	 deb             - Runs 'install-deps' followed by 'build-deb'
+
+	 compile         - Only compiles the AzireVPN client in 'src/' by calling the 'all' subcommand, while printing a message before and after.
+
+
+ ------------ 
+
+
+Internal Sub-commands - used by dpkg-buildpackage / debuild:
+
+	 clean-src       - Runs 'make clean' inside of 'src/' and deletes 'src/azclient' if found
+
+	 clean-root      - Deletes the fakeroot build env at 'DEBIAN/azirevpn' if found
+
+	 clean           - Runs 'clean-root' followed by 'clean-src'
+
+	 install         - Creates any needed dest folders, copies the compiled executable + resources to the dest folder, and finally runs 'clean-src'
+
+	 all             - Compiles the app in 'src/' using qtchooser + make
+
+===================================================== 
+
+
+

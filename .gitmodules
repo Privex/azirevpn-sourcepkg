@@ -1,0 +1,3 @@
+[submodule "azclient"]
+	path = src
+	url = https://github.com/azirevpn/azclient.git

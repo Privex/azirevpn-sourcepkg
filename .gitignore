@@ -1,0 +1,9 @@
+debian/azirevpn
+DEBIAN/azirevpn
+azirevpn.debhelper.log
+*.swp
+~*
+.debhelper
+DEBIAN/.debhelper
+debian/.debhelper
+
